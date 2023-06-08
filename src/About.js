@@ -1,27 +1,8 @@
 import React, { Component } from "react";
 import './App.css';
-import Pagination from './pagination';
+import logo from './logo.svg';
  
 class About extends Component {
-
-constructor() {
-super();
- 
-// an example array of items to be paged
-var exampleItems = [...Array(150).keys()].map(i => ({ id: (i+1), name: 'list item ' + (i+1) }));
- 
-this.state = {
-exampleItems: exampleItems,
-pageOfItems: []
-};
-this.onChangePage = this.onChangePage.bind(this);
-
-}
- 
-onChangePage(pageOfItems) {
-// update state with new page of items
-this.setState({ pageOfItems: pageOfItems });
-}
 
   render() {
     return (
@@ -31,14 +12,12 @@ this.setState({ pageOfItems: pageOfItems });
 <div className="container">
 <div className="text-center">
 <div className="title">
-<h1>ABOUT PAGINATION</h1>
-</div>
-<div className="content">
-{this.state.pageOfItems.map(item =>
-<div key={item.id}>{item.name}</div>
-)}
-
-<Pagination items={this.state.exampleItems} onChangePage={this.onChangePage}  />
+ <img src={logo} className="App-logo" alt="logo" />
+<h1>TENTANG SAYA</h1>
+<p></p>
+<h3>Senior Programmer lulusan Universitas Komputer Indonesia (UNIKOM) tahun 2007 yang telah bekerja di sebuah perusahaan konsultan IT selama  7 tahun.</h3>
+<p></p>
+<h3>Saya menganut konsep kehidupan bahwa untuk dapat menghasilkan kinerja yang baik di tempat bekerja, mesti dimulai dari diri sendiri yang mau menerima masukan dari lingkungan sekitar dan belajar serta kerja sama yang solid antara rekan</h3>
 </div>
 </div>
 </div>
