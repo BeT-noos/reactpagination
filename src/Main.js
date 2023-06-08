@@ -17,6 +17,9 @@ const Main = () => {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/DataTableBase">Tabel Data</Link>
+          </li>
         </ul>
       </nav>
 
